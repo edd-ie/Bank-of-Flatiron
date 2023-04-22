@@ -104,6 +104,13 @@
       "category": "Transportation",
       "amount": "1000",
       "id": 15
+    },
+    {
+      "date": "2023-04-07",
+      "description": "Get rich",
+      "category": "Gift",
+      "amount": "420",
+      "id": 16
     }
   ]
 }
