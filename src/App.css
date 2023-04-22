@@ -1,7 +1,16 @@
 .App {
-  text-align: center;
+  text-align: center;  
 }
 
+h1{
+  font-family: 'Castoro Titling', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 0;
+  margin-top: 1%;
+  padding: 0;
+}
 
 .App-header {
   background-color: #282c34;
@@ -13,3 +22,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+body{
+  background: #f1c0c0;
+}
+
+

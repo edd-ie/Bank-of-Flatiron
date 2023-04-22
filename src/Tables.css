@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
+
+table {
+    position: absolute;
+    left: 24%;
+    top: 20%;
+    border-spacing: 0;
+    box-shadow: 0 2px 10px rgba(64, 64, 64, .7);
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+
+}
+
+td,th {
+    padding: 5px 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #ba68c8;
+    color: #fafafa;
+    font-family: 'Open Sans', Sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+
+}
+
+tr {
+    width: 100%;
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+}
+
+tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+.filter{
+    position: absolute;
+    margin-top: 2.5%;
+    margin-left: 13px;
+    display: flex;
+    flex-direction: column;
+    width: 16%;
+    height: 7;
+    background: transparent;
+    text-align: left;
+}
+
+.filter1{
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 100%;
+}
+.filter1 button{
+    background: transparent;
+    border: 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.644);
+    padding-right: 1px;
+    padding-left: 0px;
+    padding-top: 3px;
+    margin-right: 0%;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: rgba(137, 43, 226, 0.185)
+}
+.filter1 button:hover{
+    border-left: 1px solid black;   
+    background: #ba68c8d0;
+}
+.filter1 input{
+    background: transparent;
+    border: 0;
+    border-radius: 5px;
+    padding-left: 5%;
+    padding-right: 0;
+    margin-right: 0;
+}
+.filter2 {
+    margin-top: 2px;
+    padding: 0px;
+    margin-left: 0px;
+}
+
+.filter2 select{
+    border-radius: 5px;
+    text-align: center;
+    background: rgba(235, 234, 234, 0.842);
+}
+
+.filter2 button {
+    border-radius: 4px;
+    border: 0.9px solid rgba(0, 0, 0, 0.568);
+    background: rgba(0, 255, 0, 0.349);
+    margin-left: 5px;
+}
+
+.filter2 button:hover {
+    border-radius: 4px;
+    border: 0.9px solid rgba(0, 0, 0, 0.74);
+    background: rgba(0, 255, 0, 0.795);
+
+}
