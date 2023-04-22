@@ -1,3 +1,4 @@
+import './Form.css';
 import React, {useState} from "react";
 
 function Form(){
@@ -20,7 +21,7 @@ function Form(){
         let description = formData[0].value;
         let date = formData[1].value;
         let amount = formData[2].value;
-
+        
         let data = {
             "date": date,
             "description": description,
@@ -28,27 +29,36 @@ function Form(){
             "amount": amount
         }
         console.log("file: Form.js:27 -> handleSubmit -> data:", data);
-
         
-        fetch('http://localhost:3000/transactions',{
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(data)
-        }) 
-        .then((response) => response.json())
-        .then((data) => {
-        console.log("Post request successful:", data);
-        })
+        if(description===''|| date ==='' || amount==='' || choice===''){
+            e.preventDefault();
+            alert("Fields cannot be empty")
+            return 0
+        }
+        else{
+            console.log('posting');
+            fetch('http://localhost:3000/transactions',{
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            }) 
+            .then((response) => response.json())
+            .then((data) => {
+            console.log("Post request successful:", data);
+            })
+            
+            e.target.reset();
+        }      
 
-        e.target.reset();
     }
 
 
     return(
         <>
-            <button onClick={handleNewTransaction}>New Transaction</button>
+            {!showForm &&(
+            <button onClick={handleNewTransaction} id='newBtn'>New Transaction</button>)}
             {showForm &&(
-                <form onSubmit={e => handleSubmit(e)} action="">
+                <form onSubmit={e => handleSubmit(e)} action="" id='newInput'>
                     <title>New Transaction</title>
                     <input type="text" placeholder="description" />
                     <input type="date" placeholder="date" />

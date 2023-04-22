@@ -1,0 +1,17 @@
+#newInput{
+    position: absolute;
+    top: 13%;
+    left: 24%;
+    display: flex;
+    justify-content: space-evenly;
+    background: transparent;
+    width: 55%;
+}
+
+#newBtn{
+    position: absolute;
+    left: 86%;
+    height: 4%;
+    border-radius: 5px;
+    border: 1px solid black;
+}

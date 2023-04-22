@@ -39,10 +39,45 @@ export default function Table(){
         form.reset()
     }
 
+    function quickSort(array){
+        if(array.length <=1) return array;
+        let start = array[0];
+        let left = array.filter(x=>x<start);
+        let right = array.filter(x=>x>start);
+        return [...quickSort(left), start,...quickSort(right)];
+    }
+
+    function sortByCategory(data){
+        let group = {}, sorted = [];
+
+        // Grouping by category
+        for (let item of data){
+            (group[item.category])?group[item.category].push(item):
+            group[item.category] = [item];
+        }
+        
+        
+        // Sorting by category without in-built methods
+        let key = [...quickSort(Object.keys(group))]
+        
+        for(let values of key){
+            for(let items in group[values]){
+                sorted.push(group[values][items]);
+            }
+        }
+        
+        return sorted;
+    }
+
+    function handleDelete(target){
+        let confirmation = prompt("Do you want to delete this item? \nY/N")
+        confirmation = confirmation.toLocaleLowerCase()
+        return (confirmation === "y" || confirmation ==="yes")?target.parentElement.remove():""
+    }
 
     const displayTable = (filteredContent.length > 0 ? filteredContent : originalContent).map((row)=>{
         return (
-            <tr key={row.id}> 
+            <tr key={row.id} onClick={(e)=>handleDelete(e.target)}> 
                 <td>{row.description}</td>
                 <td>{row.date}</td>
                 <td>{row.amount}</td>
@@ -53,15 +88,15 @@ export default function Table(){
 
     return(
         <div>
-            <form onSubmit={(e)=>handleSubmit(e)} className="filter">
-                <div className="filter1">                    
+            <div  id="filter">
+                <form className="filter1" onSubmit={(e)=>handleSubmit(e)}>                    
                     <input type="text" placeholder="Filter by category" />
                     <button type="submit">
                         <span class="material-symbols-outlined">
                             filter_alt
                         </span>
                     </button>
-                </div>
+                </form>
                 <div className="filter2">
                     <select onChange={e => handleSelect(e)}>
                         <option value="Category">All</option>
@@ -77,8 +112,12 @@ export default function Table(){
                         reset
                     </button>
                 </div>
-            </form>
-                        
+            </div>
+            <button onClick={() => setFilteredContent(sortByCategory(originalContent))} id='sort'>
+                <span class="material-symbols-outlined">
+                    sort_by_alpha
+                </span>
+            </button>           
             <table id="table">
                 <thead>
                     <tr>

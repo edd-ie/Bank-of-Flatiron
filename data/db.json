@@ -99,18 +99,11 @@
       "id": 14
     },
     {
-      "date": "2023-04-06",
-      "description": "new",
-      "category": "Transportation",
-      "amount": "1000",
+      "date": "2023-04-12",
+      "description": "Movies",
+      "category": "Entertainment",
+      "amount": "33",
       "id": 15
-    },
-    {
-      "date": "2023-04-07",
-      "description": "Get rich",
-      "category": "Gift",
-      "amount": "420",
-      "id": 16
     }
   ]
 }
