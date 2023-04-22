@@ -3,6 +3,11 @@ import React, {useState} from "react";
 function Form(){
 
     const [choice, setChoice] = useState('')
+    const [showForm, setShowForm] = useState(false)
+    
+    const handleNewTransaction = ()=>{
+        setShowForm(true);
+    }
 
     const handleSelect = (type)=>{
         setChoice(type.target.value)
@@ -38,24 +43,30 @@ function Form(){
         e.target.reset();
     }
 
+
     return(
-        <form onSubmit={e => handleSubmit(e)} action="">
-            <title>New Transaction</title>
-            <input type="text" placeholder="description" />
-            <input type="date" placeholder="date" />
-            <input type="number" placeholder="amount" />
-            <select onChange={e => handleSelect(e)}>
-                <option value="Category">Category</option>
-                <option value="Income">Income</option>
-                <option value="Food">Food</option>
-                <option value="Fashion">Fashion</option>
-                <option value="Gift">Gift</option>
-                <option value="Transportation">Transportation</option>
-                <option value="Entertainment">Entertainment</option>
-                <option value="Housing">Housing</option>
-            </select>
-            <input type="submit" />
-        </form>
+        <>
+            <button onClick={handleNewTransaction}>New Transaction</button>
+            {showForm &&(
+                <form onSubmit={e => handleSubmit(e)} action="">
+                    <title>New Transaction</title>
+                    <input type="text" placeholder="description" />
+                    <input type="date" placeholder="date" />
+                    <input type="number" placeholder="amount" />
+                    <select onChange={e => handleSelect(e)}>
+                        <option value="Category">Category</option>
+                        <option value="Income">Income</option>
+                        <option value="Food">Food</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Gift">Gift</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Housing">Housing</option>
+                    </select>
+                    <input type="submit" />
+                </form>
+            )}
+        </>
     )
 }
 

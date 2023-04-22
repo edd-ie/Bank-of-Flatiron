@@ -97,6 +97,13 @@
       "category": "Food",
       "amount": "3000",
       "id": 14
+    },
+    {
+      "date": "2023-04-06",
+      "description": "new",
+      "category": "Transportation",
+      "amount": "1000",
+      "id": 15
     }
   ]
 }
