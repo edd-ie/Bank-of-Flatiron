@@ -20,6 +20,12 @@ A simple react app for the transactions page of a users bank account
 - SSH => `git@github.com:edd-ie/Bank-of-Flatiron..git`
 - Git CLI => `gh repo clone edd-ie/Bank-of-Flatiron..git`
 
+Install all dependencies using.
+
+```
+npm install
+```
+
 Open your terminal and run this command to start json-server.
 
 ```
