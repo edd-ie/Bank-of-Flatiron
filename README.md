@@ -65,7 +65,8 @@ Users can also add to the table by click the new transaction button, which gener
 
 ## <a id="Code">Code</a>
 
-The JavaScript code for the Mercury website is included in the index.js file. The file contains various functions: `crypto()`, `stocks()`, `commodities()`, `indictators()`.
+The JavaScript code for the Bank of Flatiron webpage is rendered by the ```index.js ```file. 
+The file sources the JSX code from the ```App.js``` file.
 
 ### <a id="filter">Filter</a>
 
