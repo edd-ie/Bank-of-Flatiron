@@ -1,6 +1,6 @@
 # BANK OF FLATIRON
 
-A simple react app for the transactions page of a users bank account
+A simple react app for tracking the transactions of a user's finances
 
 ## Table of Contents
 
@@ -41,7 +41,7 @@ npm start
 Your default browser will be launched and the application will be rendered.
 <img src="./public/Screenshot.png" 
 alt="App screenshot"
-style="border-radius:10px;"/>
+style="border-radius:12px;"/>
 
 ## <a id="Usage">Usage</a>
 
@@ -81,7 +81,7 @@ New transactions are handle by `Form.js`
 
 ## <a id="Sources">Sources</a>
 
-The use icons and font from the following sources
+The application uses icons and fonts from the following sources
 
 - Fonts source - [Google Fonts](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap)
 - Icons source - [Google Icons](https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0)
