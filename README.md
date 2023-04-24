@@ -20,7 +20,7 @@ A simple react app for tracking the transactions of a user's finances
 - SSH => `git@github.com:edd-ie/Bank-of-Flatiron..git`
 - Git CLI => `gh repo clone edd-ie/Bank-of-Flatiron..git`
 
-Install all dependencies using.
+Open terminal and Install all dependencies using.
 
 ```
 npm install
@@ -32,7 +32,7 @@ Open your terminal and run this command to start json-server.
 npm run server
 ```
 
-Open a new terminal and run this command to start the react app (accept the assigning of a new port)
+Open a new terminal and run this command to start the react app (accept the assigning of a new port if prompted)
 
 ```
 npm start
